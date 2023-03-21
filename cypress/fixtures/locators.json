@@ -1,0 +1,13 @@
+{
+    "loginPage": {
+        "emailInputField": "#email",
+        "passwordInputField": "#password",
+        "submitBtn": "button[type='submit']"
+    },
+    "navigationButtons": {
+        "logoutBtn": "a[role='button ']"
+    },
+    "registerPage": {
+        "firstNameInputField": ""
+    }
+}

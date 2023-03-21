@@ -1,0 +1,14 @@
+{
+  "name": "marko1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "cypress": "./node_modules/.bin/cypress open"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cypress": "^12.8.1"
+  }
+}
