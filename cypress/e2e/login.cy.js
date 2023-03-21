@@ -1,6 +1,10 @@
 /// <reference types="Cypress" />
 
+// omogucavanje prustupa lokatorima u .json fajlu
 const locators = require('../fixtures/locators.json')
+// importovanje POM-a
+import { loginPage } from '../page_object/loginPage'
+import { navigationBar } from '../page_object/navigationBar';
 
 describe('Login page', () => {
 
@@ -32,13 +36,13 @@ describe('Login page', () => {
         cy.get(locators.loginPage.submitBtn).click();
     });
 
-    it('Logout', () => {
+    it.only('Logout', () => {
         // cy.visit('/login');
-        cy.get(locators.loginPage.emailInputField).type('markoqa13@gmail.com');
-        cy.get(locators.loginPage.passwordInputField).type('Marko123');
-        cy.get(locators.loginPage.submitBtn).click();
+        loginPage.emailInputField.type('markoqa13@gmail.com');
+        loginPage.passwordInputField.type('Marko123');
+        loginPage.submitBtn.click();
         cy.wait(3000);
-        cy.get(locators.navigationButtons.logoutBtn).click();
+        navigationBar.logoutBtn.click();
     });
 
 });
